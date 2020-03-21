@@ -1,0 +1,2 @@
+# ssg
+Generate an ssg
