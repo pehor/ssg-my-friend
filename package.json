@@ -1,0 +1,23 @@
+{
+  "name": "ssg-my-friend",
+  "version": "0.0.1",
+  "description": "Generate an ssg",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pehor/ssg-my-friend.git"
+  },
+  "author": "",
+  "license": "TODO",
+  "homepage": "https://github.com/pehor/ssg-my-friend#readme",
+  "dependencies": {
+    "next": "9.3.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  }
+}
