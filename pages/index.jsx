@@ -10,8 +10,8 @@ export default function Index () {
         </Link>
       </div>
       <div>
-        <Link href="/posts/0">
-          <a>Posts</a>
+        <Link href="/posts/1">
+          <a>Static Posts</a>
         </Link>
       </div>
     </div>

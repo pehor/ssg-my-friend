@@ -8,3 +8,5 @@ AWS.config.getCredentials((err) => {
     console.log("Secret access key:", AWS.config.credentials.secretAccessKey)
   }
 })
+
+export default {}
