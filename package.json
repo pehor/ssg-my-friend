@@ -1,15 +1,18 @@
 {
   "name": "ssg-my-friend",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate an ssg",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "dev:debug": "NODE_OPTIONS='--inspect' next",
     "build": "next build",
+    "build:static": "npm run build && npm run export",
     "start": "next start",
     "export": "next export",
-    "lint": "eslint './**/*.{js,jsx}'"
+    "lint": "eslint './**/*.{js,jsx,mjs}'",
+    "deploy": "node ./node_modules/s3-redeploy/bin/s3-redeploy.js --bucket psys-serve-test --cwd ./out --profile default --region eu-west-2",
+    "serve:static": "serve out -p 2500"
   },
   "repository": {
     "type": "git",
@@ -31,6 +34,8 @@
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-react": "7.19.0",
     "eslint-plugin-standard": "4.0.1",
-    "aws-sdk": "2.646.0"
+    "aws-sdk": "2.646.0",
+    "s3-redeploy": "1.1.1",
+    "serve": "11.3.0"
   }
 }

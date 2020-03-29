@@ -14,7 +14,7 @@ const Post = props => {
   )
 }
 
-Post.getInitialProps = function(context) {
+Post.getInitialProps = function (context) {
   const { id, content } = context.query
   return { id, content }
 }

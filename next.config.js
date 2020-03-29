@@ -3,7 +3,7 @@ const dummyList = require('./dummyData/dummyList')
 
 module.exports = {
   exportTrailingSlash: true,
-  exportPathMap: async function() {
+  exportPathMap: async function () {
     const paths = {
       '/': { page: '/' },
       '/about': { page: '/about' }
