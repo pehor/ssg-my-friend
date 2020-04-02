@@ -15,7 +15,6 @@ module.exports = {
     // shows.forEach(show => {
     //   paths[`/show/${show.id}`] = { page: '/show/[id]', query: { id: show.id } };
     // });
-    console.log(`nextconfig1 ${Object.keys(dummyList)}`)
     for (const post of dummyList) {
       paths[`/posts/${post.id}`] = { page: '/posts/[id]', query: { id: post.id, content: post.content } }
     }

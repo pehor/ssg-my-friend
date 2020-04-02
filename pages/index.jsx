@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Index () {
   return (
     <div>
-      <p>Hello Next.js</p>
+      <p>Hello SSG!</p>
       <div>
         <Link href="/about">
           <a>About Page</a>
