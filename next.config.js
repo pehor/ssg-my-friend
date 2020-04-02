@@ -8,16 +8,21 @@ module.exports = {
       '/': { page: '/' },
       '/about': { page: '/about' }
     }
-    // const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
+    // const res = await fetch('[some data source]');
     // const data = await res.json();
-    // const shows = data.map(entry => entry.show);
+    // const posts = data.map(entry => entry.post);
     //
-    // shows.forEach(show => {
-    //   paths[`/show/${show.id}`] = { page: '/show/[id]', query: { id: show.id } };
+    // posts.forEach(post => {
+    //   paths[`/posts/${post.id}`] = { page: '/post/[id]', query: { id: post.id } }
     // });
+
     for (const post of dummyList) {
-      paths[`/posts/${post.id}`] = { page: '/posts/[id]', query: { id: post.id, content: post.content } }
+      paths[`/posts/${post.id}`] = { page: '/posts/[id]', query: { id: post.id } }
     }
+    // Option: if using getInitialProps, we can populate them at export time with this:
+    // for (const post of dummyList) {
+    //   paths[`/posts/${post.id}`] = { page: '/posts/[id]', query: { id: post.id, content: post.content } }
+    // }
 
     return paths
   }

@@ -1,6 +1,6 @@
-# ssg
-Generate an ssg
-
+# SSG-my-friend
+Uses Next.js to generate a static website. Deploys it to AWS S3.
+Contains an example app with dummy data to simulate a simple cms as the datasource.
 # Setup
 ## Deployment
 - set up an AWS S3 bucket at https://s3.console.aws.amazon.com/
