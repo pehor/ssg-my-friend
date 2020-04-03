@@ -25,8 +25,13 @@ More info can be found [in the AWS docs](https://docs.aws.amazon.com/cli/latest/
 
 # Scripts
 
-Check package.json for all scripts. The main workflow is:
+Check package.json for all scripts. The main scripts for the workflow is:
 
 - `build`: Runs linting, builds the projects using static data, and exports everything to he `out` directory
+- `test`: Runs unittests with jest
 - `serve:static`: Serves the contents of the `out` directory locally for testing
 - `deploy`: Syncs the contents of the `out` directory to an S3 bucket
+
+# Tests
+
+See how tests are set up [here](./docs/tests.md)

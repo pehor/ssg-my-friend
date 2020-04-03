@@ -12,7 +12,11 @@
     "export": "next export",
     "lint": "eslint './**/*.{js,jsx}' && echo 'all ok!'",
     "deploy": "./scripts/deploy.sh",
-    "serve:static": "serve out -p 2500"
+    "serve:static": "serve out -p 2500",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "ci": "npm run lint && npm run test && npm run coverage && npm run build:only && npm run export"
   },
   "repository": {
     "type": "git",
@@ -36,6 +40,11 @@
     "eslint-plugin-standard": "4.0.1",
     "aws-sdk": "2.646.0",
     "s3-redeploy": "1.1.1",
-    "serve": "11.3.0"
+    "serve": "11.3.0",
+    "@testing-library/jest-dom": "5.1.0",
+    "@testing-library/react": "9.4.0",
+    "babel-jest": "25.1.0",
+    "jest": "25.2.7",
+    "react-test-renderer": "16.12.0"
   }
 }
