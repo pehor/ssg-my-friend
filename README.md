@@ -22,3 +22,11 @@ export AWS_DEFAULT_REGION=[your aws region]
 ```
 
 More info can be found [in the AWS docs](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html).
+
+# Scripts
+
+Check package.json for all scripts. The main workflow is:
+
+- `build`: Runs linting, builds the projects using static data, and exports everything to he `out` directory
+- `serve:static`: Serves the contents of the `out` directory locally for testing
+- `deploy`: Syncs the contents of the `out` directory to an S3 bucket
