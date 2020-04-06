@@ -35,3 +35,7 @@ Check package.json for all scripts. The main scripts for the workflow is:
 # Tests
 
 See how tests are set up [here](./docs/tests.md)
+
+# Styling
+
+The pages use scss. See details [here](./docs/styling.md)

@@ -1,18 +1,22 @@
 import Link from 'next/link'
 import dummyList from '../../../dummyData/dummyList'
+import MainContainer from '../../layouts/mainContainer'
+import './[id].module.scss'
 
 const Post = props => {
   const { id, content } = props
   const nextPostNumber = (parseInt(id) + 1) % 3 // there are 3 items in the mock data
   const nextPostLink = `/posts/${nextPostNumber}`
   return (
-    <div>
-      <p>Post: {id}</p>
-      <p>Content: {content}</p>
-      <Link href={nextPostLink}>
-        <a>Next post -{'>'}</a>
-      </Link>
-    </div>
+    <MainContainer>
+      <div className={ 'post' }>
+        <p className={ 'postId' }>Post: {id}</p>
+        <p className={ 'postContent' }>Content: {content}</p>
+        <Link href={nextPostLink}>
+          <a>Next post -{'>'}</a>
+        </Link>
+      </div>
+    </MainContainer>
   )
 }
 

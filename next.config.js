@@ -1,7 +1,8 @@
 // import fetch from 'isomorphic-unfetch'
+const withSass = require('@zeit/next-sass')
 const dummyList = require('./dummyData/dummyList')
 
-module.exports = {
+module.exports = withSass({
   exportTrailingSlash: true,
   exportPathMap: async function () {
     const paths = {
@@ -26,4 +27,4 @@ module.exports = {
 
     return paths
   }
-}
+})

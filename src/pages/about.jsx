@@ -1,7 +1,9 @@
+import MainContainer from '../layouts/mainContainer'
+
 export default function About () {
   return (
-    <div>
-      <p>This is the about page</p>
-    </div>
+    <MainContainer>
+      <h1>This is the about page</h1>
+    </MainContainer>
   )
 }
