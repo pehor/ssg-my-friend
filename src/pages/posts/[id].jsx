@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import dummyList from '../../dummyData/dummyList'
+import dummyList from '../../../dummyData/dummyList'
 
 const Post = props => {
   const { id, content } = props

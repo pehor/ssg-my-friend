@@ -2,9 +2,9 @@ import React from 'react'
 import { render } from '@testing-library/react'
 
 // eslint-disable-next-line import/no-duplicates
-import Post from '../../../pages/posts/[id]'
+import Post from '../../../src/pages/posts/[id]'
 // eslint-disable-next-line import/no-duplicates
-import { getStaticProps, getStaticPaths } from '../../../pages/posts/[id]'
+import { getStaticProps, getStaticPaths } from '../../../src/pages/posts/[id]'
 
 describe('post', () => {
   describe('rendering', () => {
