@@ -68,7 +68,10 @@ class MainContainer extends Component {
     ...
     return (
       ...
-      <div className={ styles.pageHeader }>
+      <div className={ styles.pageHeader }></div>
+    )
+  }
+}
 ```
 
 Reset.scss is loaded from an npm module and resets some of the common default browser stylings.
