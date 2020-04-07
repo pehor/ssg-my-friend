@@ -5,13 +5,13 @@ export default function Index () {
   return (
     <MainContainer>
       <h1>Hello SSG!</h1>
-      <div style={{ height: 10 + 'em' }}></div>
-      <div style={{ 'margin-top': '1em' }}>
+      <div style={{ height: '10em' }}></div>
+      <div style={{ marginTop: '1em' }}>
         <Link href="/about">
           <a>About Page</a>
         </Link>
       </div>
-      <div style={{ 'margin-top': '1em' }}>
+      <div style={{ marginTop: '1em' }}>
         <Link href="/posts/0">
           <a>Static Posts</a>
         </Link>

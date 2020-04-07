@@ -10,8 +10,8 @@ const Post = props => {
   return (
     <MainContainer>
       <div className={ styles.post }>
-        <p className={ styles.postId }>Post: {id}</p>
-        <p className={ styles.postContent }>Content: {content}</p>
+        <h2 className={ styles.postId }>Post: {id}</h2>
+        <p className={ styles.postContent }>{content}</p>
         <Link href={nextPostLink}>
           <a>Next post -{'>'}</a>
         </Link>
