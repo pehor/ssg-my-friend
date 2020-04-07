@@ -1,8 +1,11 @@
 # SSG-my-friend
-Uses Next.js to generate a static website. Deploys it to AWS S3.
-Contains an example app with dummy data to simulate a simple cms as the datasource.
-# Setup
-## Deployment
+This repository is meant to be an example and a starting point for building a static website generator.
+It uses Next.js to generate a static website. Scripts are included to deploy the results to AWS S3.
+
+There are simple static pages and generated static pages. The `dummyData` folder is included to emulate a simple CMS as the data source for the generated pages (see `src/pages/posts`).
+This data is read at build time from there.
+
+# Setup to support deployment to AWS S3
 - set up an AWS S3 bucket at https://s3.console.aws.amazon.com/
 
 You need to create an S3 bucket. It needs to be set up for static website hosting. Blocking public access should be turned off.
@@ -13,7 +16,7 @@ You need to create "programmatic" access credentials i.e. API keys.
  - Add your keys and other configs to your development machine (or CI)
 
 You need to have a file in your home directory called `.ssg-config.sh`
-and you need to export the following AWS config envs:
+and you need to export the following AWS config environment variables:
 ```shell script
 export S3_BUCKET=[your bucket]
 export AWS_ACCESS_KEY_ID=[your aws key id]
@@ -25,7 +28,7 @@ More info can be found [in the AWS docs](https://docs.aws.amazon.com/cli/latest/
 
 # Scripts
 
-Check package.json for all scripts. The main scripts for the workflow is:
+All scripts can be run by `npm run <script>`. Check package.json for all scripts. The main scripts for the workflow is:
 
 - `build`: Runs linting, builds the projects using static data, and exports everything to he `out` directory
 - `test`: Runs unittests with jest
@@ -34,8 +37,44 @@ Check package.json for all scripts. The main scripts for the workflow is:
 
 # Tests
 
-See how tests are set up [here](./docs/tests.md)
+Unittests are run by Jest. Coverage is also available. You can run them like this:
+
+```shell script
+npm run test
+npm run coverage
+```
+
+Because we use React, we need a few extra configs to test rendering of pages.
+
+`.babelrc` is required to transpile jsx files using babel, so that the tests can use them.
+
+`tests/setupTests.js` is a common setup file. In our case it loads `@testing-library/jest-dom/extend-expect`, which contains extensions to help with matching things in the dom.
+
+`jest.config.js` sets up coverage checking, defines the route to setupTests.js, and defines transpiling options. 
+
+`"jest": true` is added to `.eslintre.json` so that we don't get undefined errors for test() and expect() in our tests.
 
 # Styling
 
-The pages use scss. See details [here](./docs/styling.md)
+This project uses Sass and styles are set up to be module-scoped. This means that the styles for your xxx.jsx file need to be in a file called xxx.module.scss.
+That file needs to be imported in the jsx module, and the class names defined in the scss file should be used. For example:
+
+```jsx harmony
+// contents of mainContainer.jsx:
+import styles from './mainContainer.module.scss'
+
+class MainContainer extends Component {
+  render () {
+    ...
+    return (
+      ...
+      <div className={ styles.pageHeader }>
+```
+
+Reset.scss is loaded from an npm module and resets some of the common default browser stylings.
+
+Common variables are defined in `src/styles/variables.scss` and need to be imported to files that use them.
+
+# Static assets
+
+All static assets need to be stored in the `/public` folder. See the `/public/logo.png` as an example. Make sure files don't have the same name as a file in the `/pages` directory.
