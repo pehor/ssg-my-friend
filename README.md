@@ -81,3 +81,7 @@ Common variables are defined in `src/styles/variables.scss` and need to be impor
 # Static assets
 
 All static assets need to be stored in the `/public` folder. See the `/public/logo.png` as an example. Make sure files don't have the same name as a file in the `/pages` directory.
+
+# Web crawlers
+
+A robots.txt file is included to disallow all indexing. Change this according to your needs.
