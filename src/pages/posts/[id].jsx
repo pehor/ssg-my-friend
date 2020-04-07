@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import dummyList from '../../../dummyData/dummyList'
 import MainContainer from '../../layouts/mainContainer'
-import './[id].module.scss'
+import styles from './[id].module.scss'
 
 const Post = props => {
   const { id, content } = props
@@ -9,9 +9,9 @@ const Post = props => {
   const nextPostLink = `/posts/${nextPostNumber}`
   return (
     <MainContainer>
-      <div className={ 'post' }>
-        <p className={ 'postId' }>Post: {id}</p>
-        <p className={ 'postContent' }>Content: {content}</p>
+      <div className={ styles.post }>
+        <p className={ styles.postId }>Post: {id}</p>
+        <p className={ styles.postContent }>Content: {content}</p>
         <Link href={nextPostLink}>
           <a>Next post -{'>'}</a>
         </Link>

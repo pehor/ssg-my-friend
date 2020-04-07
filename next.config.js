@@ -26,5 +26,6 @@ module.exports = withSass({
     // }
 
     return paths
-  }
+  },
+  cssModules: true
 })

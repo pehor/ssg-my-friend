@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import './mainContainer.module.scss'
+import styles from './mainContainer.module.scss'
 
 class MainContainer extends Component {
   render () {
     const { children } = this.props
     return (
-      <div className={'container'}>
-        <div className={'container-centered'}>
+      <div className={ styles.container}>
+        <div className={ styles['container-centered'] }>
           { children }
         </div>
       </div>
