@@ -1,4 +1,3 @@
-// import fetch from 'isomorphic-unfetch'
 const withSass = require('@zeit/next-sass')
 const dummyList = require('./dummyData/dummyList')
 
@@ -9,13 +8,6 @@ module.exports = withSass({
       '/': { page: '/' },
       '/about': { page: '/about' }
     }
-    // const res = await fetch('[some data source]');
-    // const data = await res.json();
-    // const posts = data.map(entry => entry.post);
-    //
-    // posts.forEach(post => {
-    //   paths[`/posts/${post.id}`] = { page: '/post/[id]', query: { id: post.id } }
-    // });
 
     for (const post of dummyList) {
       paths[`/posts/${post.id}`] = { page: '/posts/[id]', query: { id: post.id } }

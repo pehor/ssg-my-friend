@@ -54,6 +54,7 @@ Because we use React, we need a few extra configs to test rendering of pages.
 
 `"jest": true` is added to `.eslintre.json` so that we don't get undefined errors for test() and expect() in our tests.
 
+In order to make .scss module imports work in tests, in `jest.config.js`, the `moduleNameMapper` object was added to point all style (and other non-js) files to a mock.
 # Styling
 
 This project uses Sass and styles are set up to be module-scoped. This means that the styles for your xxx.jsx file need to be in a file called xxx.module.scss.
