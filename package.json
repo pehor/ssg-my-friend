@@ -25,7 +25,7 @@
   "license": "MIT",
   "homepage": "https://github.com/pehor/ssg-my-friend#readme",
   "dependencies": {
-    "next": "9.3.1",
+    "next": "9.3.4",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
