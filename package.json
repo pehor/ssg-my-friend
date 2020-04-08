@@ -1,8 +1,7 @@
 {
   "name": "ssg-my-friend",
-  "version": "0.0.2",
-  "description": "Generate an ssg",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "A static site generator",
   "scripts": {
     "dev": "next",
     "dev:debug": "NODE_OPTIONS='--inspect' next",
@@ -23,7 +22,7 @@
     "url": "git+https://github.com/pehor/ssg-my-friend.git"
   },
   "author": "",
-  "license": "TODO",
+  "license": "MIT",
   "homepage": "https://github.com/pehor/ssg-my-friend#readme",
   "dependencies": {
     "next": "9.3.1",
