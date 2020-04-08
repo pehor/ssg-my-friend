@@ -17,8 +17,8 @@ describe('post', () => {
       expect(res.getByText(/Post: 2/)).toBeInTheDocument()
     })
 
-    test('renders post conent', () => {
-      expect(res.getByText(/Content: My post/)).toBeInTheDocument()
+    test('renders post content', () => {
+      expect(res.getByText(/My post/)).toBeInTheDocument()
     })
 
     test('renders next post link', () => {
@@ -33,7 +33,7 @@ describe('post', () => {
       })).toStrictEqual({
         props: {
           id: '1',
-          content: 'Post 1'
+          content: 'Post 1 content'
         }
       })
     })

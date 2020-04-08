@@ -85,3 +85,7 @@ All static assets need to be stored in the `/public` folder. See the `/public/lo
 # Web crawlers
 
 A robots.txt file is included to disallow all indexing. Change this according to your needs.
+
+# License
+
+This repository licensed under MIT license.
