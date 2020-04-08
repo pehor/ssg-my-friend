@@ -9,6 +9,21 @@ This data is read at build time from there.
 - set up an AWS S3 bucket at https://s3.console.aws.amazon.com/
 
 You need to create an S3 bucket. It needs to be set up for static website hosting. Blocking public access should be turned off.
+You need to add a bucket policy that allows reading from it. It should look like this:
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::<your-bucket-name>/*"
+        }
+    ]
+}
+```
 
 You need to create an IAM user with S3 read/write access.
 You need to create "programmatic" access credentials i.e. API keys.
