@@ -43,6 +43,8 @@ More info can be found [in the AWS docs](https://docs.aws.amazon.com/cli/latest/
 
 # Scripts
 
+You need to run `npm install` before running any of the scripts below.
+
 All scripts can be run by `npm run <script>`. Check package.json for all scripts. The main scripts for the workflow is:
 
 - `build`: Runs linting, builds the projects using static data, and exports everything to he `out` directory
@@ -93,6 +95,8 @@ class MainContainer extends Component {
 Reset.scss is loaded from an npm module and resets some of the common default browser stylings.
 
 Common variables are defined in `src/styles/variables.scss` and need to be imported to files that use them.
+
+Font-awesome is included by default, see examples of its usage in `index.jsx`.
 
 # Static assets
 

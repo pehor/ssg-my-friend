@@ -1,7 +1,9 @@
 const withSass = require('@zeit/next-sass')
+const withFonts = require('next-fonts')
+
 const dummyList = require('./dummyData/dummyList')
 
-module.exports = withSass({
+module.exports = withFonts(withSass({
   exportTrailingSlash: true,
   exportPathMap: async function () {
     const paths = {
@@ -20,4 +22,4 @@ module.exports = withSass({
     return paths
   },
   cssModules: true
-})
+}))

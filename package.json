@@ -6,7 +6,7 @@
     "dev": "next",
     "dev:debug": "NODE_OPTIONS='--inspect' next",
     "build:only": "next build",
-    "build": "npm run lint && npm run build:only && npm run export",
+    "build": "npm run lint && npm run build:only && rm -rf ./out && npm run export",
     "start": "next start",
     "export": "next export",
     "lint": "eslint './**/*.{js,jsx}' && echo 'all ok!'",
@@ -47,6 +47,10 @@
     "react-test-renderer": "16.12.0",
     "@zeit/next-sass": "1.0.1",
     "node-sass": "4.13.1",
-    "reset-css": "5.0.1"
+    "reset-css": "5.0.1",
+    "next-fonts": "1.0.3",
+    "@fortawesome/react-fontawesome": "0.1.9",
+    "@fortawesome/fontawesome-svg-core": "1.2.28",
+    "@fortawesome/free-solid-svg-icons": "5.13.0"
   }
 }
