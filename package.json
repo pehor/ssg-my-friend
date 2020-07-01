@@ -21,8 +21,10 @@
     "type": "git",
     "url": "git+https://github.com/pehor/ssg-my-friend.git"
   },
-  "author": "",
-  "license": "MIT",
+  "author": {
+    "name": "Peter Horvath"
+  },
+  "license": "SEE LICENSE IN THE FILE 'LICENSE'",
   "homepage": "https://github.com/pehor/ssg-my-friend#readme",
   "dependencies": {
     "next": "9.3.4",
@@ -39,7 +41,7 @@
     "eslint-plugin-standard": "4.0.1",
     "aws-sdk": "2.646.0",
     "s3-redeploy": "1.1.1",
-    "serve": "11.3.0",
+    "serve": "11.3.2",
     "@testing-library/jest-dom": "5.1.0",
     "@testing-library/react": "9.4.0",
     "babel-jest": "25.1.0",
