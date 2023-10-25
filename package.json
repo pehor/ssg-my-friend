@@ -27,7 +27,7 @@
   "license": "SEE LICENSE IN THE FILE 'LICENSE'",
   "homepage": "https://github.com/pehor/ssg-my-friend#readme",
   "dependencies": {
-    "next": "9.3.4",
+    "next": "13.5.0",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
